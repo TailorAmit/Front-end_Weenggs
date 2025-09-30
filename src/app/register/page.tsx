@@ -18,13 +18,10 @@ export default function RegisterPage() {
 
     const onSubmit = async (data: RegisterFormInputs) => {
         try {
-            debugger
             const res = await api.post("/auth/register", data);
-            debugger
             localStorage.setItem("token", res.data.token);
             router.push("/");
         } catch (err) {
-            debugger
             alert("Registration failed. Please try again.");
         }
     };

@@ -18,7 +18,6 @@ export default function LoginPage() {
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("user", JSON.stringify(res.data?.user));
       localStorage.setItem("role", res?.data?.user?.role);
-      debugger
       router.push("/");
     } catch (err) {
       alert("Login failed. Please check your credentials.");

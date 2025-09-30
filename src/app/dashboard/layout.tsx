@@ -39,7 +39,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             {/* Sidebar */}
             <aside
                 className={`${darkMode
-                    ? "bg-white text-gray-900" // override for darkMode ON
+                    ? "bg-white text-gray-900"
                     : "bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
                     } p-4 flex flex-col justify-between transition-all duration-300 ${open ? "w-64" : "w-20"}`}
             >
@@ -61,21 +61,21 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                             <>
                                 <Link href="/dashboard" className={`flex items-center gap-3 p-2 rounded transition-colors
         ${darkMode
-                                        ? "hover:bg-gray-100"   // lighter hover for white sidebar in dark mode
+                                        ? "hover:bg-gray-100"
                                         : "hover:bg-gray-200 dark:hover:bg-gray-700"
                                     }`}>
                                     <Home className="w-5 h-5" /> {open && <span>Dashboard</span>}
                                 </Link>
                                 <Link href="/dashboard/post-job" className={`flex items-center gap-3 p-2 rounded transition-colors
         ${darkMode
-                                        ? "hover:bg-gray-100"   // lighter hover for white sidebar in dark mode
+                                        ? "hover:bg-gray-100"
                                         : "hover:bg-gray-200 dark:hover:bg-gray-700"
                                     }`}>
                                     <Briefcase className="w-5 h-5" /> {open && <span>Post New Job</span>}
                                 </Link>
                                 <Link href="/dashboard/applicants" className={`flex items-center gap-3 p-2 rounded transition-colors
         ${darkMode
-                                        ? "hover:bg-gray-100"   // lighter hover for white sidebar in dark mode
+                                        ? "hover:bg-gray-100"
                                         : "hover:bg-gray-200 dark:hover:bg-gray-700"
                                     }`}>
                                     <Users className="w-5 h-5" /> {open && <span>View Applicants</span>}
@@ -87,14 +87,14 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                             <>
                                 <Link href="/dashboard/jobs" className={`flex items-center gap-3 p-2 rounded transition-colors
         ${darkMode
-                                        ? "hover:bg-gray-100"   // lighter hover for white sidebar in dark mode
+                                        ? "hover:bg-gray-100"
                                         : "hover:bg-gray-200 dark:hover:bg-gray-700"
                                     }`}>
                                     <Search className="w-5 h-5" /> {open && <span>Job Listings</span>}
                                 </Link>
                                 <Link href="/dashboard/applied" className={`flex items-center gap-3 p-2 rounded transition-colors
         ${darkMode
-                                        ? "hover:bg-gray-100"   // lighter hover for white sidebar in dark mode
+                                        ? "hover:bg-gray-100"
                                         : "hover:bg-gray-200 dark:hover:bg-gray-700"
                                     }`}>
                                     <FileText className="w-5 h-5" /> {open && <span>My Applications</span>}
@@ -113,7 +113,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                         onClick={toggleDarkMode}
                         className={`flex items-center gap-3 p-2 rounded transition-colors
         ${darkMode
-                                ? "hover:bg-gray-100"   // lighter hover for white sidebar in dark mode
+                                ? "hover:bg-gray-100"
                                 : "hover:bg-gray-200 dark:hover:bg-gray-700"
                             }`}
                     >

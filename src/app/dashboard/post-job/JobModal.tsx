@@ -33,7 +33,7 @@ export default function JobModal({
     } = useForm<JobForm>();
 
     const { role, darkMode
-    } = useAppContext(); // ✅ theme + role
+    } = useAppContext();
 
     useEffect(() => {
         if (initialData) {

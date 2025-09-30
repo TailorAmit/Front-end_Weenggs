@@ -15,12 +15,11 @@ export default function DashboardPage() {
     });
     const [loading, setLoading] = useState(true);
 
-    const { role, darkMode } = useAppContext(); // ✅ role + theme
+    const { role, darkMode } = useAppContext();
 
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                // company/admin: jobs, candidate: applications
                 if (role === "company" || role === "admin") {
                     const jobsRes = await api.get("/jobs/my-jobs");
                     setStats((prev) => ({

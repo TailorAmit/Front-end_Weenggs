@@ -10,7 +10,7 @@ export default function PostJobPage() {
     const [modalOpen, setModalOpen] = useState(false);
     const [editJob, setEditJob] = useState<Job | null>(null);
 
-    const { role, darkMode } = useAppContext(); // ✅ role + theme
+    const { role, darkMode } = useAppContext();
 
     const fetchJobs = async () => {
         try {
@@ -57,7 +57,6 @@ export default function PostJobPage() {
         }
     };
 
-    // 🚫 Restrict: only company/admin can post jobs
     if (role !== "company" && role !== "admin") {
         return (
             <div

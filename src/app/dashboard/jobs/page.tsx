@@ -29,7 +29,7 @@ export default function JobsPage() {
     const [modalOpen, setModalOpen] = useState(false);
     const [selectedJob, setSelectedJob] = useState<Job | null>(null);
 
-    const { darkMode, role } = useAppContext(); // ✅ theme + role
+    const { darkMode, role } = useAppContext();
 
     const { register, handleSubmit } = useForm<FilterForm>();
     const { register: registerApply, handleSubmit: handleApplySubmit, reset } = useForm<ApplyForm>();

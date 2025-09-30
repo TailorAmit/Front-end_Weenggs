@@ -33,7 +33,6 @@ export default function AppliedPage() {
         fetchApplications();
     }, []);
 
-    // If not a user role, don’t show this page
     if (role !== "user") {
         return (
             <div

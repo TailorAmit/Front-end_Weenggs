@@ -17,7 +17,7 @@ type Application = {
 
 export default function AppliedPage() {
     const [applications, setApplications] = useState<Application[]>([]);
-    const { role, darkMode } = useAppContext(); // ✅ use context
+    const { role, darkMode } = useAppContext();
 
     const fetchApplications = async () => {
         try {
@@ -32,7 +32,6 @@ export default function AppliedPage() {
         fetchApplications();
     }, []);
 
-    // 🔒 Restrict to user role only
     if (role !== "user") {
         return (
             <div
